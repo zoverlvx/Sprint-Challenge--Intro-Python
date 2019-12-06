@@ -26,9 +26,10 @@ def cityreader(cities=[]):
     import csv
     with open("cities.csv") as file:
         reader = csv.reader(file, delimiter=",")
+        next(reader)
+        print(reader)
         for row in reader:
-            cities.append(City(row[0], row[3], row[4]))
-        cities.pop(0)
+            cities.append(City(row[0], float(row[3]), float(row[4])))
     return cities
   # TODO Implement the functionality to read from the 'cities.csv' file
   # For each city record, create a new City instance and add it to the 
