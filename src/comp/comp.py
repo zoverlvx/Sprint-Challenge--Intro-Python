@@ -4,11 +4,11 @@ import re
 import math
 
 class Human:
-    def __init__(self, name, age):
+    def __init__(self, name: str, age: int):
         self.name = name
         self.age = age
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"<Human: {self.name}, {self.age}>"
 
 humans = [
