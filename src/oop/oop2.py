@@ -4,9 +4,9 @@
 # object is constructed.
 
 class GroundVehicle():
-    def __init__(self, num_wheels=4):
-        self.num_wheels = num_wheels 
-    def drive(self):
+    def __init__(self, num_wheels: int = 4):
+        self.num_wheels: int = num_wheels 
+    def drive(self) -> str:
         return "vroooom"
     
     # TODO
@@ -20,9 +20,9 @@ class GroundVehicle():
 # Override the drive() method in Motorcycle so that it returns "BRAAAP!!"
 
 class Motorcycle(GroundVehicle):
-    def __init__(self, num_wheels=2):
+    def __init__(self, num_wheels: int = 2):
         super().__init__(num_wheels)
-    def drive(self):
+    def drive(self) -> str:
         return "BRAAAP!!"
 
 # TODO
